@@ -911,6 +911,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cb26b0300ad6d4d89909d643a74edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementAction:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4a933436-0516-48c0-ab64-772cc0aabed9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  JumpForce: 0
+  gravityModifier: 0
+  IsOnGround: 1
 --- !u!54 &7575589404394611397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -957,8 +969,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1612028, y: 3.349015, z: 1}
-  m_Center: {x: 0.08060154, y: 1.1745077, z: 4.7596593e-11}
+  m_Size: {x: 1.1612028, y: 2.8528252, z: 1}
+  m_Center: {x: 0.08060157, y: 1.4226027, z: -4.737407e-10}
 --- !u!1 &5903924173310790602
 GameObject:
   m_ObjectHideFlags: 0
