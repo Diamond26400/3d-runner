@@ -912,7 +912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementAction:
-    m_Name: 
+    m_Name: Movement
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 4a933436-0516-48c0-ab64-772cc0aabed9

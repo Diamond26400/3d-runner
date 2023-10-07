@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     public float gravityModifier;
     public bool IsOnGround = true;
+    public bool GameOver = false;
 
     void Start()
     {
+
         playerRb = GetComponent<Rigidbody>();
 
         // Enable the input action
@@ -31,7 +33,16 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        IsOnGround = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            IsOnGround = true;
+        }
+        else if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            GameOver = true;
+            Debug.Log("GameOver!");
+        }
+
     }
 }
 
