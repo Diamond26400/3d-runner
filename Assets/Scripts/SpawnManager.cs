@@ -10,6 +10,7 @@ public class SpawnManager : MonoBehaviour
     public float SpawnDelay = 2.0f;
     public float SpawnRate = 2.0f;
     private PlayerController PlayerControllerScript;
+    private float leftBound = -15;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +25,15 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnObstacle()
     {
+        //Freezes the Game
         if (PlayerControllerScript.GameOver == false)
         {
             Instantiate(ObstaclePreferb, spawnPos, ObstaclePreferb.transform.rotation);
         }
-      
+        // destroy Obstacle
+        if (transform.position.x<leftBound && gameObject.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
