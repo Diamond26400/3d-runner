@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 835818924}
   m_Layer: 9
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 2014335016}
   m_Layer: 9
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,6 +683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 6566828398886360636, guid: 2825c07388188dc4c8a1ec325b7e1420, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -750,6 +754,10 @@ PrefabInstance:
     - target: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6261431329711857827, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,10 +839,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3184869093816947993, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
-      propertyPath: speed
-      value: 35
-      objectReference: {fileID: 0}
     - target: {fileID: 5986129078053766552, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15
@@ -875,13 +879,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8580470321898055479, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
-      propertyPath: m_Constraints
-      value: 122
-      objectReference: {fileID: 0}
     - target: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_Name
       value: Barrel Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
