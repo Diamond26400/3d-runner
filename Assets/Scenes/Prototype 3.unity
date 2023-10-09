@@ -456,6 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  PlayerControllerScript: {fileID: 0}
 --- !u!114 &835818923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,24 +490,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 112.79999, y: 18.836718, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1814779875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-  m_PrefabInstance: {fileID: 7713513226586079520}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1814779881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1814779875}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82756fae3858e1d4594ab7b23c86655e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
 --- !u!1 &2014335011
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  PlayerControllerScript: {fileID: 0}
 --- !u!1 &4365567445187868357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
@@ -703,61 +687,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: JumpForce
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: IsOnGround
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: gravityModifier
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_Name
-      value: Movement
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 3b740281-9170-4e4a-8309-58499341f47b
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Keyboard>/space
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Movement
-      objectReference: {fileID: 0}
-    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: movementAction.m_SingletonActionBindings.Array.data[0].m_Interactions
-      value: Tap
-      objectReference: {fileID: 0}
-    - target: {fileID: 4956114968009291343, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4956114968009291343, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 6261431329711857827, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -799,37 +731,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_Constraints
-      value: 122
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_ImplicitCom
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7575589404394611397, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      propertyPath: m_ImplicitTensor
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5483540810393813252, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1814779881}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
 --- !u!1001 &8751560636319668926
 PrefabInstance:
@@ -882,10 +787,6 @@ PrefabInstance:
     - target: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_Name
       value: Barrel Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

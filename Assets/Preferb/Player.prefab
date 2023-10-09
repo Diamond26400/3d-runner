@@ -918,7 +918,7 @@ MonoBehaviour:
     m_ExpectedControlType: 
     m_Id: 4a933436-0516-48c0-ab64-772cc0aabed9
     m_Processors: 
-    m_Interactions: 
+    m_Interactions: Tap
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 3b740281-9170-4e4a-8309-58499341f47b

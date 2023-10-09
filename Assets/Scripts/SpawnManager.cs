@@ -31,7 +31,7 @@ public class SpawnManager : MonoBehaviour
             Instantiate(ObstaclePreferb, spawnPos, ObstaclePreferb.transform.rotation);
         }
         // destroy Obstacle
-        if (transform.position.x<leftBound && gameObject.CompareTag("Obstacle"))
+        if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
         {
             Destroy(gameObject);
         }
