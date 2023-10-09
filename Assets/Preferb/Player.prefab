@@ -929,7 +929,7 @@ MonoBehaviour:
       m_Action: Movement
       m_Flags: 0
     m_Flags: 0
-  JumpForce: 20
+  JumpForce: 16.5
   gravityModifier: 4
   IsOnGround: 1
   GameOver: 0
@@ -941,7 +941,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5483540810393813252}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 60
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}

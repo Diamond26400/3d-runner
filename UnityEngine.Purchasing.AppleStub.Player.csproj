@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E14CE859-EBD0-838B-8A7A-0AC7F2AE0F6C}</ProjectGuid>
+    <ProjectGuid>{3CBE7F1D-2B1B-58A4-2E93-80675805866B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>UnityEngine.Purchasing.AppleStub</AssemblyName>
@@ -641,15 +641,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Purchasing.Common.Player.csproj">
-      <Project>{89D55542-ACA2-D5B0-6F36-D0A2BDBB42FF}</Project>
+      <Project>{F44166B2-EC55-DB44-FCE3-8F710599173F}</Project>
       <Name>Purchasing.Common.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.Purchasing.AppleCore.Player.csproj">
-      <Project>{2CB66404-2BC6-999F-E808-2915D039F446}</Project>
+      <Project>{00E95C82-35D5-EF66-3C08-7EB7FC700E5B}</Project>
       <Name>UnityEngine.Purchasing.AppleCore.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{9D641155-D435-B575-1718-23AF9E809110}</Project>
+      <Project>{60E13146-24BC-5430-2D44-75CB10076636}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>
