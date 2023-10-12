@@ -6,34 +6,53 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    //Movement of the player
     public InputAction movementAction;
-    private Rigidbody playerRb;
+
+    // Animation 
     private Animator PlayerAnim;
+
+    //Audio of the Game
     public AudioClip JumbClip;
     public AudioClip CrashClip;
+    private AudioSource PlayerSound;
+
+    // Particle System
     public ParticleSystem ExplosionParticle;
     public ParticleSystem DirtSplater;
+
+    //Jumping mechnisim & rigid
     public float JumpForce;
+    private Rigidbody playerRb;
     public float gravityModifier;
-    public bool IsOnGround = true;
     public bool GameOver = false;
-    private AudioSource PlayerSound;
+    public bool IsOnGround = true;
+   
+   
 
     void Start()
     {
-
+        // RigidBody
         playerRb = GetComponent<Rigidbody>();
+
+        //Animator
         PlayerAnim = GetComponent<Animator>();
+
+        //Audio
         PlayerSound = GetComponent<AudioSource>();
+
         // Enable the input action
         movementAction.Enable();
+
+        // Physics modifier
         Physics.gravity *= gravityModifier;
     }
     void Update()
     {
+        //Trigger Movement Action
         if (movementAction.triggered && IsOnGround && !GameOver)
         {
-            // Spacebar was pressed
+            // Spacebar is pressed
             playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             IsOnGround = false;
             PlayerAnim.SetTrigger("Jump_trig");
@@ -41,6 +60,7 @@ public class PlayerController : MonoBehaviour
             PlayerSound.PlayOneShot(JumbClip, 1.0f);
         }
     }
+    // Collison Statement 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -48,6 +68,7 @@ public class PlayerController : MonoBehaviour
             IsOnGround = true;
             DirtSplater.Play();
         }
+        // End Of Game Statment
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("GameOver!");
