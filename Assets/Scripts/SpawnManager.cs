@@ -5,12 +5,13 @@ using UnityEngine.UIElements;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject ObstaclePreferb;
+    public GameObject[] ObstaclePreferbs;
     private Vector3 spawnPos = new Vector3(25, 0, 0);
     public float SpawnDelay = 2.0f;
     public float SpawnRate = 2.0f;
     private PlayerController PlayerControllerScript;
     private float leftBound = -15;
+    private int spawnRandom;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +29,9 @@ public class SpawnManager : MonoBehaviour
         //Freezes the Game
         if (PlayerControllerScript.GameOver == false)
         {
-            Instantiate(ObstaclePreferb, spawnPos, ObstaclePreferb.transform.rotation);
+            spawnRandom = Random.Range(0, ObstaclePreferbs.Length);
+            Instantiate(ObstaclePreferbs[spawnRandom], spawnPos, ObstaclePreferbs[spawnRandom].transform.rotation);
+
         }
         // destroy Obstacle
         if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
