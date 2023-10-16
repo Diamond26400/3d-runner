@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 10
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,13 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
-  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -67,9 +66,6 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
-    m_FinalGather: 0
-    m_FinalGatherFiltering: 1
-    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -157,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddc5b20bbbf4f904f8ab1e534a5b6e9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstaclePreferb: {fileID: 4365567445187868357}
+  ObstaclePreferb: {fileID: 0}
   SpawnDelay: 2
   SpawnRate: 2
 --- !u!4 &161707274
@@ -169,7 +165,7 @@ Transform:
   m_GameObject: {fileID: 161707272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.71000004, y: 4, z: -15}
+  m_LocalPosition: {x: 4.033, y: 4, z: -14.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -200,9 +196,8 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170076733}
   m_Enabled: 1
-  serializedVersion: 10
+  serializedVersion: 11
   m_Type: 1
-  m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
   m_Intensity: 1
   m_Range: 10
@@ -210,10 +205,10 @@ Light:
   m_InnerSpotAngle: 21.802082
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
+    m_Type: 1
+    m_Resolution: 1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -328,7 +323,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 40
   orthographic: 0
   orthographic size: 5
@@ -373,6 +368,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d70999ba737574c808b1d37cbdca0c37, type: 3}
+  m_Resource: {fileID: 8300000, guid: d70999ba737574c808b1d37cbdca0c37, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.03
   m_Pitch: 1
@@ -516,6 +512,8 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -695,6 +693,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.03
   m_Pitch: 1
@@ -838,6 +837,8 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -961,11 +962,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb7cd9b0c56a24d49a40784bd3203ae6, type: 3}
---- !u!1 &4365567445187868357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
-  m_PrefabInstance: {fileID: 8751560636319668926}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7563770916463451060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1021,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 6566828398886360636, guid: 2825c07388188dc4c8a1ec325b7e1420, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 6566828398886360636, guid: 2825c07388188dc4c8a1ec325b7e1420, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1138,7 +1138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3184869093816947993, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: speed
-      value: 40
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 3184869093816947993, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: PlayerControllerScript
@@ -1146,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 820752126}
     - target: {fileID: 5986129078053766552, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 27.8
+      value: 20.81
       objectReference: {fileID: 0}
     - target: {fileID: 5986129078053766552, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1183,6 +1183,30 @@ PrefabInstance:
     - target: {fileID: 5986129078053766552, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Size.x
+      value: 0.7677078
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0940597
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Size.z
+      value: 0.82462305
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Center.x
+      value: -0.082775116
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Center.y
+      value: 0.66111743
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444421847362912724, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
+      propertyPath: m_Center.z
+      value: -0.010929853
       objectReference: {fileID: 0}
     - target: {fileID: 9135091287074527169, guid: 3b9ecc3cb04e3114ba50c4a8c9055988, type: 3}
       propertyPath: m_Name
