@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             PlayerAnim.SetTrigger("Jump_trig");
             PlayerSound.PlayOneShot(JumbClip, 1.0f);
+            
         }
 
     }
