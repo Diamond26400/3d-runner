@@ -490,6 +490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 1732272334065596, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4434221626337540, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.656998
@@ -915,6 +919,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: White fence
       objectReference: {fileID: 0}
+    - target: {fileID: 145980, guid: 84a102c1bf03d0a43bd4b342185c2811, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 445980, guid: 84a102c1bf03d0a43bd4b342185c2811, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.89
@@ -1236,9 +1244,21 @@ PrefabInstance:
       value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
+      propertyPath: IsOnGround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: DirtSplater
       value: 
       objectReference: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
+    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
+      propertyPath: DoubleJumpUsed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
+      propertyPath: doubleJumpForce
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 1151735501484225338, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
       propertyPath: gravityModifier
       value: 1.5
@@ -1295,7 +1315,8 @@ PrefabInstance:
       propertyPath: PlayerControllerScript
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7930895352508072001, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6261431329711857827, guid: 95f5f2aaff9d4f34b9c40eefd051a25a, type: 3}
