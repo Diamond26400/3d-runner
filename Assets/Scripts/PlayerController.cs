@@ -26,9 +26,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody playerRb;
     public float gravityModifier;
     public bool GameOver = false;
-    public bool IsOnGround = true;
+    private bool IsOnGround = true;
+    public bool DoubleJumpUsed = true;
+    public float doubleJumpForce = 2.0f;
    
-   
+
 
     void Start()
     {
@@ -78,6 +80,15 @@ public class PlayerController : MonoBehaviour
             ExplosionParticle.Play();
             DirtSplater.Stop();
             PlayerSound.PlayOneShot(CrashClip, 1.0f);
+            DoubleJumpUsed = false;
+        }
+        else if (movementAction.triggered && !IsOnGround && !DoubleJumpUsed )
+        {
+            DoubleJumpUsed = true;
+            // Spacebar is pressed
+            playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            PlayerAnim.SetTrigger("Jump_trig");
+            PlayerSound.PlayOneShot(JumbClip, 1.0f);
         }
 
     }
