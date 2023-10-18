@@ -31,7 +31,10 @@ public class SpawnManager : MonoBehaviour
         {
             spawnRandom = Random.Range(0, ObstaclePreferbs.Length);
             Instantiate(ObstaclePreferbs[spawnRandom], spawnPos, ObstaclePreferbs[spawnRandom].transform.rotation);
-
+            if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
+            {
+                Destroy(gameObject);
+            }
         }
         // destroy Obstacle
         if (transform.position.x < leftBound && gameObject.CompareTag("Obstacle"))
