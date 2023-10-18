@@ -85,10 +85,10 @@ public class PlayerController : MonoBehaviour
         else if (movementAction.triggered && !IsOnGround && !DoubleJumpUsed )
         {
             DoubleJumpUsed = true;
-            // Spacebar is pressed
-            playerRb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-            PlayerAnim.SetTrigger("Jump_trig");
-            PlayerSound.PlayOneShot(JumbClip, 1.0f);
+            // Movement and animation
+            playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
+            PlayerAnim.Play("Running_Jump", 3,0f);
+            PlayerSound.PlayOneShot(JumbClip,1.0f);
             
         }
 
