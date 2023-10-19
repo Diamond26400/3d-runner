@@ -937,6 +937,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Movement
       m_Flags: 0
+    - m_Name: 
+      m_Id: 3615e7d2-de58-457f-8447-54770f86355c
+      m_Path: <Keyboard>/leftShift
+      m_Interactions: Press
+      m_Processors: 
+      m_Groups: 
+      m_Action: Movement
+      m_Flags: 0
     m_Flags: 0
   JumbClip: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   CrashClip: {fileID: 8300000, guid: 913d6445ee8cc4152a9c18da590ee203, type: 3}
@@ -944,9 +952,11 @@ MonoBehaviour:
   DirtSplater: {fileID: 1438565936, guid: fb82dfb8d1c7044c69afd2486befecb3, type: 3}
   JumpForce: 700
   gravityModifier: 1.5
+  doubleJumpForce: 900000000
+  DoubleSpeed: 0
   GameOver: 0
+  IsOnGround: 1
   DoubleJumpUsed: 1
-  doubleJumpForce: 1400
 --- !u!54 &7575589404394611397
 Rigidbody:
   m_ObjectHideFlags: 0

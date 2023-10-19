@@ -25,11 +25,14 @@ public class PlayerController : MonoBehaviour
     public float JumpForce;
     private Rigidbody playerRb;
     public float gravityModifier;
-    public bool GameOver = false;
-    private bool IsOnGround = true;
-    public bool DoubleJumpUsed = true;
-    public float doubleJumpForce = 2.0f;
+    public float doubleJumpForce = 10.0f;
+
+    //bool statement
     public bool DoubleSpeed;
+    public bool GameOver = false;
+    public bool IsOnGround = true;
+    public bool DoubleJumpUsed = false;
+
 
 
 
@@ -66,12 +69,13 @@ public class PlayerController : MonoBehaviour
         {
             DoubleSpeed = true;
             PlayerAnim.SetFloat("Speed_Multiplier", 2.0f);
-        } else if (DoubleSpeed)
+        }
+        else if (DoubleSpeed)
         {
             DoubleSpeed = false;
             PlayerAnim.SetFloat("Speed_Multiplier", 1.0f);
         }
-        
+
     }
     // Collison Statement 
     private void OnCollisionEnter(Collision collision)
@@ -86,21 +90,21 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("GameOver!");
             GameOver = true;
-            PlayerAnim.SetBool("Death_b",true);
+            PlayerAnim.SetBool("Death_b", true);
             PlayerAnim.SetInteger("DeathType_int", 1);
             ExplosionParticle.Play();
             DirtSplater.Stop();
             PlayerSound.PlayOneShot(CrashClip, 1.0f);
             DoubleJumpUsed = false;
         }
-        else if (movementAction.triggered && !IsOnGround && !DoubleJumpUsed )
+        else if (movementAction.triggered && !IsOnGround && !DoubleJumpUsed)
         {
             DoubleJumpUsed = true;
             // Movement and animation
             playerRb.AddForce(Vector3.up * doubleJumpForce, ForceMode.Impulse);
-            PlayerAnim.Play("Running_Jump", 3,0f);
-            PlayerSound.PlayOneShot(JumbClip,1.0f);
-            
+            PlayerAnim.Play("Running_Jump", 3, 0f);
+            PlayerSound.PlayOneShot(JumbClip, 1.0f);
+
         }
 
     }
