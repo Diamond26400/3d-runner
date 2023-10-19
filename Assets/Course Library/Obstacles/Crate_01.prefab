@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3373954}
   - component: {fileID: 2321600}
   - component: {fileID: 8164081200343346439}
-  - component: {fileID: 1276757904857280829}
   - component: {fileID: 6002353990891530908}
+  - component: {fileID: 1033613047735350586}
   m_Layer: 0
   m_Name: Crate_01
   m_TagString: Untagged
@@ -102,7 +102,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 30
   PlayerControllerScript: {fileID: 0}
---- !u!54 &1276757904857280829
+--- !u!65 &6002353990891530908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134104}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.6168016, y: 1.534686, z: 1.554323}
+  m_Center: {x: -0.031238796, y: 0.78698033, z: 0}
+--- !u!54 &1033613047735350586
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,24 +150,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
---- !u!65 &6002353990891530908
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 134104}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.554324, y: 1.534686, z: 1.554323}
-  m_Center: {x: 0, y: 0.78698033, z: -0}

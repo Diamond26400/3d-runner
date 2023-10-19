@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
     private bool IsOnGround = true;
     public bool DoubleJumpUsed = true;
     public float doubleJumpForce = 2.0f;
-   
+    public bool DoubleSpeed;
+
 
 
     void Start()
@@ -61,6 +62,16 @@ public class PlayerController : MonoBehaviour
             DirtSplater.Stop();
             PlayerSound.PlayOneShot(JumbClip, 1.0f);
         }
+        if (movementAction.triggered)
+        {
+            DoubleSpeed = true;
+            PlayerAnim.SetFloat("Speed_Multiplier", 2.0f);
+        } else if (DoubleSpeed)
+        {
+            DoubleSpeed = false;
+            PlayerAnim.SetFloat("Speed_Multiplier", 1.0f);
+        }
+        
     }
     // Collison Statement 
     private void OnCollisionEnter(Collision collision)
