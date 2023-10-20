@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         {
             score++;
         }
-        Debug.Log("score : " + score);
+        Debug.Log("score: " + score);
         }
     IEnumerator PlayIntro()
     {
