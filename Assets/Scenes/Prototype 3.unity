@@ -534,6 +534,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 122
       objectReference: {fileID: 0}
+    - target: {fileID: 2678088706406921653, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
+      propertyPath: PlayerControllerScript
+      value: 
+      objectReference: {fileID: 820752126}
     - target: {fileID: 3176915859542444035, guid: cdcb19fde9e8cba40b7bff849baf2c1b, type: 3}
       propertyPath: m_Size.x
       value: 2.477255
@@ -891,6 +895,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 809657083295846748, guid: 84a102c1bf03d0a43bd4b342185c2811, type: 3}
+      propertyPath: PlayerControllerScript
+      value: 
+      objectReference: {fileID: 820752126}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
